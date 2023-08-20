@@ -37,7 +37,7 @@ let playerCurrentPositionRelative = {
     x: -200,
     y: -120,
 }
-background.onload = () => {
+mapTest1.onload = () => {
     ctx.drawImage(mapTest1, playerCurrentPositionRelative.x, playerCurrentPositionRelative.y, 4800, 4800);
     ctx.fillStyle = 'white';
     ctx.fillRect(playerProperties.positionX, playerProperties.positionY, playerProperties.playerWidth, playerProperties.playerHeight);
