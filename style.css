@@ -1,0 +1,8 @@
+#canvasMain {
+    padding: 0;
+    margin: auto;
+    display: block;
+    background: black;
+    width: 800;
+    height: 480;
+}
