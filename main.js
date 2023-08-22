@@ -19,7 +19,7 @@ update player class
     methods -----
         collision detection
         player collision box?
-        player states
+        player states01
         player animation
 create file for settings
     control for movement variables
