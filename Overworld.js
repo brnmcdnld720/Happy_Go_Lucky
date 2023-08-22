@@ -5,38 +5,28 @@ class Overworld {
         this.ctx = this.canvas.getContext("2d");
     }
 
-        init() {
-            const image = new Image();
-            image.onload = () => {
-                this.ctx.drawImage(image, 0,0);
-            };
-            image.src = 'Assets/01-pizza-legends-intro/images/maps/DemoLower.png'
+    init() {
+        const image = new Image();
+        image.onload = () => {
+            this.ctx.drawImage(image, 0,0);
+        };
+        image.src = 'Assets/01-pizza-legends-intro/images/maps/DemoLower.png'
 
-            const x = 5;
-            const y = 6;
+        //place some game objects!
+        const hero = new GameObject({
+            x: 5,
+            y: 6,
+        });
+        const npc1 = new GameObject({
+            x: 7,
+            y: 9,
+            src: "Assets/01-pizza-legends-intro/images/characters/people/npc1.png"
+        });
 
-            const shadow = new Image();
-            shadow.onload = () => {
-                this.ctx.drawImage(
-                    shadow, 
-                    0, 0, //x, y top left cut
-                    32, 32, // width and height of cut
-                    x * 16 -8, y * 16 - 18, // x, y position of character on map
-                    32, 32); // width and height of size to draw
-            }
-            
-            shadow.src = "Assets/01-pizza-legends-intro/images/characters/shadow.png"
-
-            const hero = new Image();
-            hero.onload = () => {
-                this.ctx.drawImage(
-                    hero, 
-                    0, 0, //x, y top left cut
-                    32, 32, // width and height of cut
-                    x * 16 -8, y * 16 - 18, // x, y position of character on map
-                    32, 32); // width and height of size to draw
-            }
-            hero.src = "Assets/01-pizza-legends-intro/images/characters/people/hero.png"
-        }
+        setTimeout(() =>{
+            hero.sprite.draw(this.ctx);
+            npc1.sprite.draw(this.ctx);
+    }, 200);
+    }
 
 }
