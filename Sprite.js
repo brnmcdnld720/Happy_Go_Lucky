@@ -30,16 +30,22 @@ class Sprite {
     }
 
     draw(ctx) {
-        const x = this.gameObject.x * 16 - 8;
+        const x = this.gameObject.x * 16 - 8 ;
         const y = this.gameObject.y * 16 - 18;
+        const dw = this.gameObject.dw;
+        const dh = this.gameObject.dh;
+        const w = this.gameObject.w;
+        const h = this.gameObject.h;
+        const shadowX = x - this.gameObject.shadowX || x;
+        const shadowY = y - this.gameObject.shadowY || y;
 
-        this.isShadowLoaded && ctx.drawImage(this.shadow, x, y);
+        this.isShadowLoaded && ctx.drawImage(this.shadow, shadowX, shadowY);
 
         ctx.drawImage(this.image,
             0, 0,
-            32, 32,
+            dw, dh,
             x, y,
-            32, 32            
+            w, h            
         )
     }
 }
