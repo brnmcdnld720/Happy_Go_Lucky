@@ -1,8 +1,23 @@
-#canvasMain {
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #333;
     padding: 0;
-    margin: auto;
-    display: block;
-    background: black;
-    width: 800;
-    height: 480;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 352px;
+    height: 198px;
+    margin: 0 auto;
+    outline: 1px solid #fff;
+
+    transform: scale(2) translateY(50%);
+}
+
+.game-container canvas {
+    image-rendering: pixelated;
 }
