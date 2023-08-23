@@ -39,14 +39,15 @@ window.OverworldMaps = {
         backgroundSrc: 'Assets/01-pizza-legends-intro/images/maps/DemoLower.png',
         foregroundSrc: 'Assets/01-pizza-legends-intro/images/maps/DemoUpper.png',
         gameObjects: {
-            hero: new GameObject({
-                x: 5,
-                y: 6,
+            hero: new Person({
+                isPlayerControlled: true,
+                x: utils.withGrid(5),
+                y: utils.withGrid(6),
                 src: "Assets/01-pizza-legends-intro/images/characters/people/hero.png"
             }),
-            npc1: new GameObject({
-                x: 7,
-                y: 9,
+            npc1: new Person({
+                x: utils.withGrid(7),
+                y: utils.withGrid(9),
                 src: "Assets/01-pizza-legends-intro/images/characters/people/npc1.png"
             }),
         }
@@ -79,9 +80,10 @@ window.OverworldMaps = {
         dw: 750,
         dh: 750,
         gameObjects: {
-            hero: new GameObject({
-                x: 5,
-                y: 6,
+            hero: new Person({
+                isPlayerControlled: true,
+                x: utils.withGrid(5),
+                y: utils.withGrid(6),
                 dw: 16,
                 dh: 16,
                 w: 16,
